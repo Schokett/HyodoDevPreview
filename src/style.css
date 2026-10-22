@@ -70,13 +70,13 @@ html:lang(ja) body {
   to { transform: translate(8%, 6%); }
 }
 
-/* Editor window */
+/* Linux terminal window */
 .window {
   position: relative;
   width: min(760px, 100%);
   background: var(--panel);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: 6px;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow:
@@ -87,26 +87,57 @@ html:lang(ja) body {
 .window__bar {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 16px;
+  gap: 12px;
+  padding: 6px 8px 6px 14px;
+  background: rgba(30, 32, 42, 0.9);
   border-bottom: 1px solid var(--border);
+  border-radius: 6px 6px 0 0;
 }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+.window__icon {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--green);
 }
-.dot--red { background: #ff5f57; }
-.dot--yellow { background: #febc2e; }
-.dot--green { background: #28c840; }
 
 .window__file {
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 52px;
+  flex: 1;
+  text-align: center;
   font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.controls {
+  display: flex;
+  gap: 6px;
+}
+
+.control {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
   color: var(--muted);
+}
+
+.control svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.control--close {
+  background: #e95420;
+  color: #fff;
 }
 
 .window__body {
@@ -119,8 +150,14 @@ html:lang(ja) body {
   color: var(--muted);
 }
 
-.prompt__sign {
+.prompt__user {
   color: var(--green);
+  font-weight: 700;
+}
+
+.prompt__path {
+  color: #60a5fa;
+  font-weight: 700;
 }
 
 .caret {
@@ -204,7 +241,7 @@ html:lang(ja) body {
 .status__val { color: var(--green); }
 
 @media (max-width: 480px) {
-  .window__file { display: none; }
+  .window__icon { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
