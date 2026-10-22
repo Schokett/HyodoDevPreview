@@ -1,13 +1,56 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
     <title>hyodo.dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div id="app"></div>
+    <main class="hero">
+      <div class="grid" aria-hidden="true"></div>
+      <div class="glow" aria-hidden="true"></div>
+
+      <div class="window">
+        <div class="window__bar" aria-hidden="true">
+          <span class="dot dot--red"></span>
+          <span class="dot dot--yellow"></span>
+          <span class="dot dot--green"></span>
+          <span class="window__file">~/hyodo.dev/index.js</span>
+        </div>
+
+        <div class="window__body">
+          <p class="prompt" aria-hidden="true">
+            <span class="prompt__sign">$</span> npm run build<span class="caret"></span>
+          </p>
+
+          <h1 class="title">
+            <span data-i18n="title">Hyodo.dev wird gebaut</span>
+            <span class="loader" role="status" aria-label="loading">
+              <span></span><span></span><span></span>
+            </span>
+          </h1>
+
+          <p class="subtitle">
+            <span class="comment" aria-hidden="true">// </span>
+            <span data-i18n="subtitle">Bitte besuchen Sie die Seite zu einem späteren Zeitpunkt noch einmal.</span>
+          </p>
+
+          <p class="status" aria-hidden="true">
+            <span class="status__tag">&lt;status</span>
+            <span class="status__attr">state</span>=<span class="status__val">"building"</span>
+            <span class="status__tag">/&gt;</span>
+          </p>
+        </div>
+      </div>
+    </main>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
