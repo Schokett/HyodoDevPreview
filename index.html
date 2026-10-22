@@ -20,15 +20,24 @@
 
       <div class="window">
         <div class="window__bar" aria-hidden="true">
-          <span class="dot dot--red"></span>
-          <span class="dot dot--yellow"></span>
-          <span class="dot dot--green"></span>
-          <span class="window__file">~/hyodo.dev/index.js</span>
+          <span class="window__icon">&gt;_</span>
+          <span class="window__file">dev@hyodo: ~/hyodo.dev</span>
+          <span class="controls">
+            <span class="control">
+              <svg viewBox="0 0 16 16"><path d="M4 8h8" /></svg>
+            </span>
+            <span class="control">
+              <svg viewBox="0 0 16 16"><rect x="4.5" y="4.5" width="7" height="7" /></svg>
+            </span>
+            <span class="control control--close">
+              <svg viewBox="0 0 16 16"><path d="M5 5l6 6M11 5l-6 6" /></svg>
+            </span>
+          </span>
         </div>
 
         <div class="window__body">
           <p class="prompt" aria-hidden="true">
-            <span class="prompt__sign">$</span> npm run build<span class="caret"></span>
+            <span class="prompt__user">dev@hyodo</span>:<span class="prompt__path">~/hyodo.dev</span>$ npm run build<span class="caret"></span>
           </p>
 
           <h1 class="title">
